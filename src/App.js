@@ -1,18 +1,12 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Button from './Button';
-import { Bell, Menu, Search, Upload, User, Home, Wallet} from 'lucide-react';
+import { Bell, Menu, Search, Upload, User, Home, Wallet } from 'lucide-react';
 import logo from './template/logochange.jpg';
 import change from './change'  
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
-import Change from './change'
 function App() {
-  const navigate = useNavigate();
-  const goToChange= ()=> {
-    navigate('/change');
-  }
 return (
-  <Router> <div className="flex flex-col items-center pt-2 mb-5 mx-5 overflow-auto">
+    <div className="flex flex-col items-center pt-2 mb-5 mx-5 overflow-auto">
       {/* Barre de navigation */}
       <div className=" fixed flex justify-between items-center w-full">
         <div className="flex gap-4 items-center flex-shrink-0">
@@ -75,11 +69,6 @@ return (
         </div>
       </div>
     </div>
-    <Routes>
-    <Route path="/change" element={<Change/>}/> 
-    </Routes>
-    </Router>
-   
   );
 }
 
